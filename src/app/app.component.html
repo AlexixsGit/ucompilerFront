@@ -1,80 +1,80 @@
 <div id="wrapper">
-
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container navigation">
-
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-        <a class="navbar-brand" href="index.html">
-          <h1><strong>Ucompiler</strong></h1>
-        </a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#doctor">Doctors</a></li>
-          <li><a href="#facilities">Facilities</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
-            <ul class="dropdown-menu dropdown-lr animated" role="menu">
-                <div class="col-lg-12">
-                    <div class="text-center"><h3><b>Log In</b></h3></div>
-                    <form id="ajax-login-form" action="#" method="post" role="form" >
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="on">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
-                        </div>
-
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-xs-7">
-                                    <input type="checkbox" tabindex="3" name="remember" id="remember">
-                                    <label for="remember"> Remember Me</label>
-                                </div>
-                                <div class="col-xs-5 pull-right">
-                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="text-center">
-                                        <a href="#" tabindex="5" class="forgot-password">Olvidé mi contraseña?</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                  <div class="text-center">
-                                      <a href="#" tabindex="5" class="forgot-password">Crear nueva cuenta</a>
+  
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container navigation">
+  
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                      <i class="fa fa-bars"></i>
+                  </button>
+          <a class="navbar-brand" href="index.html">
+            <h1><strong>Ucompiler</strong></h1>
+          </a>
+        </div>
+  
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#intro">Home</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#doctor">Doctors</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated" role="menu">
+                  <div class="col-lg-12">
+                      <div class="text-center"><h3><b>Log In</b></h3></div>
+                      <form id="ajax-login-form" action="#" method="post" role="form" >
+                          <div class="form-group">
+                              <label for="username">Username</label>
+                              <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="on">
+                          </div>
+  
+                          <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+                          </div>
+  
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-xs-7">
+                                      <input type="checkbox" tabindex="3" name="remember" id="remember">
+                                      <label for="remember"> Remember Me</label>
+                                  </div>
+                                  <div class="col-xs-5 pull-right">
+                                      <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
                                   </div>
                               </div>
-                            </div>
-                        </div>
-                        <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
-                    </form>
-                </div>
-            </ul>
-        </li>
-        </ul>
+                          </div>
+  
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-lg-12">
+                                      <div class="text-center">
+                                          <a href="#" tabindex="5" class="forgot-password">Olvidé mi contraseña?</a>
+                                      </div>
+                                  </div>
+                                  <div class="col-lg-12">
+                                    <div class="text-center">
+                                        <a routerLink="/users" routerLinkActive="active" tabindex="5" class="forgot-password">Crear nueva cuenta</a>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+                      </form>
+                  </div>
+              </ul>
+          </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
+      <!-- /.container -->    
+    </nav>
+  
 
-  <footer></footer>
-
+<router-outlet ></router-outlet>
+<footer></footer>
 </div>
-<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
