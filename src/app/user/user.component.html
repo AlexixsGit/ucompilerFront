@@ -48,6 +48,23 @@
                         <input type="password" class="form-control" name="pwd1" required id="pwd1" [(ngModel)]="confirmPassword" placeholder="Repita la contraseña">
                       </div>
                     </div>
+                    <div class="col-md-7 col-md-offset-3">
+                      <table class="table table-bordered">
+                        <tr>
+                          <td>
+                            <tr>
+                              <textarea readonly rows="1" cols="50" class="form-control captcha-textarea">{{captcha}}</textarea>
+                            </tr>
+                            <tr>
+                              <input class="form-control" style="font-weight:bold">
+                            </tr>
+                          </td>
+                          <td>
+                            <img (click)="recaptcha()" class="recaptcha-img-button" src="../../img/recaptcha.gif">
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
                     <div class="form-group">
                       <div class="col-sm-offset-5 col-sm-10">
                         <button (click)="!isRunning && saveOrUpdate()" class="btn btn-primary">Crear cuenta</button>
@@ -74,11 +91,11 @@
       </div>
       <div class="modal-body row">
         <div class="container col-md-12">
-         <label>La cuenta ha sido creda exitosamente</label>
+          <label>La cuenta ha sido creda exitosamente</label>
         </div>
       </div>
       <div class="modal-footer">
-        <input type="button" data-dismiss="modal" class="btn btn-primary" value="cerrar">
+        <input type="button" (click)="closeSuccesfulModal()" data-dismiss="modal" class="btn btn-primary" value="cerrar">
       </div>
     </div>
   </div>

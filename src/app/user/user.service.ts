@@ -24,6 +24,10 @@ export class UserService {
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
+  public loadCaptcha(): Observable<String> {
+    return this.http.get(this.userRestUrl + "getCaptcha").map((res: Response) => res.text());
+  }
+
   //It validates required fields
   public validate(user: User, confirmPassword: string): boolean {
     let isValid = true;

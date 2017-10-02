@@ -18,3 +18,17 @@ ul.dropdown-lr {
 .lg8-container-centered{
 	margin-left: 18%;
 }
+
+.recaptcha-img-button{
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+.captcha-textarea{
+	resize:none;
+	font-family:cursive;
+	background-color:silver;
+	text-decoration:line-through;
+	font-size: 30px;
+	font-weight: bolder;
+}

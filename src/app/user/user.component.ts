@@ -18,6 +18,7 @@ export class UserComponent implements OnInit {
   public message: Array<String>;
   public confirmPassword: string;
   public isEditing: boolean;
+  public captcha: String;
 
   @ViewChild("messageModal") mensajemodal: ElementRef;
 
@@ -27,6 +28,7 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.loadCaptcha();
   }
 
   //Function to insert or to update an user
@@ -54,5 +56,28 @@ export class UserComponent implements OnInit {
     } else {
       this.message = this.userService.getErrorMessage();
     }
+  }
+
+  //Refresh the captcha
+  public recaptcha(): void {
+    this.loadCaptcha();
+  }
+  //Close modal when is open
+  public closeSuccesfulModal(): void {
+    this.clean();
+  }
+
+  private loadCaptcha(): void {
+    this.userService.loadCaptcha().subscribe(res => {
+      this.captcha = res;
+    })
+  }
+
+  //Clean objects
+  private clean(): void {
+    this.user = new User();
+    this.confirmPassword = "";
+    this.isValid = true;
+    this.message = Array<String>();
   }
 }
