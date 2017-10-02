@@ -29,7 +29,7 @@ export class UserService {
   }
 
   //It validates required fields
-  public validate(user: User, confirmPassword: string): boolean {
+  public validate(user: User, confirmPassword: string, captcha: String, userCaptcha: String): boolean {
     let isValid = true;
     this.errorMessage = new Array<String>();
 
@@ -52,6 +52,12 @@ export class UserService {
       this.errorMessage.push("Repita la contraseña");
       isValid = false;
     }
+
+    if (captcha !== userCaptcha) {
+      this.errorMessage.push("El captcha no coincide con la imagen");      
+      isValid = false;
+    }
+
     return isValid;
   }
 

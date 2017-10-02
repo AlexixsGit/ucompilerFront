@@ -19,6 +19,7 @@ export class UserComponent implements OnInit {
   public confirmPassword: string;
   public isEditing: boolean;
   public captcha: String;
+  public userCaptcha: String;
 
   @ViewChild("messageModal") mensajemodal: ElementRef;
 
@@ -34,7 +35,7 @@ export class UserComponent implements OnInit {
   //Function to insert or to update an user
   public saveOrUpdate(): void {
     this.message = new Array<String>();
-    this.isValid = this.userService.validate(this.user, this.confirmPassword);
+    this.isValid = this.userService.validate(this.user, this.confirmPassword, this.captcha, this.userCaptcha);
 
     if (this.isValid) {
       this.isRunning = true;
@@ -56,6 +57,8 @@ export class UserComponent implements OnInit {
     } else {
       this.message = this.userService.getErrorMessage();
     }
+    this.loadCaptcha();
+    this.userCaptcha = "";
   }
 
   //Refresh the captcha

@@ -56,7 +56,7 @@
                               <textarea readonly rows="1" cols="50" class="form-control captcha-textarea">{{captcha}}</textarea>
                             </tr>
                             <tr>
-                              <input class="form-control" style="font-weight:bold">
+                              <input class="form-control" name="userCaptcha" [(ngModel)]="userCaptcha" style="font-weight:bold">
                             </tr>
                           </td>
                           <td>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                       <div class="col-sm-offset-5 col-sm-10">
-                        <button (click)="!isRunning && saveOrUpdate()" class="btn btn-primary">Crear cuenta</button>
+                        <button type="submit" (click)="!isRunning && saveOrUpdate()" class="btn btn-primary">Crear cuenta</button>
                       </div>
                     </div>
                     <small>Los campos con  * son obligatorios</small>
