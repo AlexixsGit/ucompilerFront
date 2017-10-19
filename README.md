@@ -22,7 +22,7 @@ Para poder ejecutar y/o seguir con el desarrollo del aplicativo hay que tener en
   Es importante resaltar que la aplicacion consume unos servicios rest que deben de estar expuestos, y que a su vez esos servicios apuntan   a una base de datos, entonces para que se pueda interactuar con la aplicacion debemos de contar con estas dependencias.
   En este mismo repositorio expongo la base de datos llamada ucompilerDatabase y el backend llamado ucompilerBackend
 
-#Build
+# Build
 En tiempo de desarrollo podemos utilizar el proyecto clonado y continuar con la construccion del software, pero para ambientes productivos debemos generar el compilado del proyecto front ejecutando en la linea de comandos de la maquina en la ruta donde esta el proyecto ng build --prod --aot, automaticamente nos crea una carpeta temporal llamada dist, el contenido de esta carpeta es el que vamos a pegar en la carpeta webapp del proyecto java, luego generamos el war o el ear y con esto ya tenemos un proyecto listo para ambientes productivos.
 
 # Contribute
